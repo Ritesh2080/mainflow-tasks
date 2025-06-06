@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    background: url('../images/bg_image.jpg') no-repeat center center;
+    background-size: cover;
+    transform-origin: center;
+  }
+
+  .welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  /* Glass Card */
+  .card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 4rem 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 0.8s ease-out;
+    color: white;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Gradient Heading */
+  .card h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Subtext */
+  .card p {
+    font-size: 1.4rem;
+    color: #e8e8e8;
+    margin-bottom: 2rem;
+  }
+  
+  /* Stylish Button */
+  .btn {
+    padding: 1rem 2.5rem;
+    background-color: #3a5b22;
+    color: white;
+    border: none;
+    border-radius: 1.2rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    animation: pulse 2s infinite;
+  }
+  
+  .btn:hover {
+    background-color: #618c42;
+    transform: translateY(-3px);
+  }
+  
+  .btn:active {
+    transform: scale(0.97);
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(58, 91, 34, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(58, 91, 34, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(58, 91, 34, 0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .card {
+      padding: 2rem;
+    }
+  
+    .card h1 {
+      font-size: 2rem;
+    }
+  
+    .btn {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
