@@ -82,11 +82,3 @@ Using the NetBeans Design window:
   }
   ```
 
-
-## 🗂️ Files Created
-- `Login.java`: Main UI and logic class
-- `RoundedBorder.java`: Custom border utility
-- `DESIGN_STEPS.txt`: Documentation of the process
-
----
-
